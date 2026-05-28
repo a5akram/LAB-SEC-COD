@@ -1,0 +1,22 @@
+{
+  "name": "secure-campus-checkin",
+  "version": "1.0.0",
+  "description": "CYSE 411 in-class lab: Secure Campus Event Check-in Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo-checklist": "node tests/security-checks.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "secure-software-engineering",
+    "javascript",
+    "browser-security",
+    "cyse411"
+  ],
+  "author": "CYSE 411",
+  "license": "Creative Commons Legal Code"
+}

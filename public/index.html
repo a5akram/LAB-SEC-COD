@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Campus Event Check-in Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CYSE 411 Lab</p>
+        <h1>Campus Event Check-in Portal</h1>
+        <p class="subtitle">
+          Review this application as a secure software engineering team. Your job is to
+          demonstrate client-side security weaknesses and implement safer fixes.
+        </p>
+      </div>
+      <div class="status-card" id="vipPanel" hidden>
+        <p class="vip-label">VIP PANEL</p>
+        <h2>Restricted Briefing Room</h2>
+        <p>This panel should only be visible to users authorized by the server.</p>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <form id="checkinForm" class="card">
+        <h2>Participant Check-in</h2>
+
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Alex Student" autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="student@gmu.edu" autocomplete="email" />
+
+        <label for="ticketType">Ticket type</label>
+        <select id="ticketType" name="ticketType">
+          <option value="student">Student</option>
+          <option value="guest">Guest</option>
+          <option value="vip">VIP</option>
+        </select>
+
+        <label for="inviteCode">Invitation code</label>
+        <input id="inviteCode" name="inviteCode" placeholder="CYSE-STUDENT-2026" />
+
+        <label class="checkbox-row">
+          <input id="terms" type="checkbox" />
+          I confirm that this check-in request is accurate.
+        </label>
+
+        <button id="checkBtn" type="button">Check Access</button>
+      </form>
+
+      <section class="card">
+        <h2>Check-in Result</h2>
+        <div id="result" class="result muted">
+          Submit the form to check access.
+        </div>
+
+        <h3>Suggested valid codes</h3>
+        <ul>
+          <li><code>CYSE-STUDENT-2026</code></li>
+          <li><code>CYSE-GUEST-2026</code></li>
+          <li><code>VIP-SECURE-2026</code></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

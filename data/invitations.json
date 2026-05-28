@@ -1,0 +1,17 @@
+[
+  {
+    "code": "CYSE-STUDENT-2026",
+    "role": "student",
+    "description": "General student event access"
+  },
+  {
+    "code": "CYSE-GUEST-2026",
+    "role": "guest",
+    "description": "General guest event access"
+  },
+  {
+    "code": "VIP-SECURE-2026",
+    "role": "vip",
+    "description": "Restricted VIP briefing access"
+  }
+]
