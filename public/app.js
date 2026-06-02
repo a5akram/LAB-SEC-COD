@@ -53,7 +53,7 @@ function updateUI(profile, data) {
   // INTENTIONAL VULNERABILITY #3:
   // Untrusted input is rendered as HTML. Students should use textContent
   // or safe DOM node creation instead.
-  resultBox.innerHTML = "Welcome " + profile.name + "! " + data.message;
+  resultBox.textContent = "Welcome ${profile.name}! ${data.message}";
 }
 
 async function submitCheckin() {
