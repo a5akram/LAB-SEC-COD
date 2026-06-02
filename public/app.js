@@ -82,13 +82,10 @@ async function submitCheckin() {
   } catch (error) {
     console.error("Check-in error:", error);
 
-    // INTENTIONAL VULNERABILITY #4:
-    // This fails open. Errors must not grant access.
-    updateUI(profile, {
-      allowed: true,
-      role: "student",
-      message: "Access granted in offline mode."
-    });
+    // INTENTIONAL VULNERABILITY #4: (fail closed)
+    resultBox.classList.remove("muted", "granted");
+    resultBox.classList.add("denied");
+    resultBox.textContent = "Access denied. Please try again.";
   }
 }
 
