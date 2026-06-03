@@ -37,7 +37,14 @@ function loadSession() {
 function saveSession(profile) {
   // INTENTIONAL VULNERABILITY #2:
   // This stores authorization-sensitive data in browser-controlled storage.
-  localStorage.setItem("campusSession", JSON.stringify(profile));
+  // To fix, only store non-sensitive preferences
+  const safe = {
+    name: typeof profile?.name === "string" ? profile.name : "",
+    email: typeof profile?.email === "string" ? profile.email : "",
+    ticketType:
+      typeof profile?.ticketType === "string" ? profile.ticketType : "student"
+  }
+  localStorage.setItem("campusSession", JSON.stringify(safe));
 }
 
 function updateUI(profile, data) {
